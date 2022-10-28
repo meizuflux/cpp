@@ -48,9 +48,9 @@ bool compare_3(char v[3]) {
 
 bool check_winner(char s[9]) {
     char comparisons[8][3] {
-        {s[0], s[1], s[2]}, {s[3], s[4], s[5]}, {s[6], s[7], s[8]},
-        {s[0], s[4], s[6]}, {s[1], s[5], s[7]}, {s[2], s[6], s[8]},
-        {s[0], s[4], s[8]}, {s[2], s[4], s[6]}
+        {s[0], s[1], s[2]}, {s[3], s[4], s[5]}, {s[6], s[7], s[8]}, // across
+        {s[0], s[3], s[6]}, {s[1], s[4], s[7]}, {s[2], s[5], s[8]}, // down
+        {s[0], s[4], s[8]}, {s[2], s[4], s[6]}                      // diagonal
     };
     for (int i=0; i<8; i++) {
         if (comparisons[i][0] == comparisons[i][1] && comparisons[i][0] == comparisons[i][2] && comparisons[i][0] != ' ') {
